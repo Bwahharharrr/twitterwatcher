@@ -1,0 +1,40 @@
+# EVERY 13 SECONDS POLL TWITTER 
+CRON_SCHEDULE 		   = "*/13 * * * * *"
+
+# IP:PORT
+TEAMSPEAK_IP           = "127.0.0.1:1234"
+# STRING 
+TEAMSPEAK_API_USER     = ""
+# STRING 
+TEAMSPEAK_API_PASSWORD = ""
+# INT 
+TEAMSPEAK_SERVER_ID    = 123
+# STRING 
+TEAMSPEAK_BOT_USERNAME = "[MyBotUsername]"
+ 
+# STRINGS 
+TWITTER_URL             = "https://twitter.com/%s/status/%d"
+TWITTER_CONSUMER_KEY    = ""
+TWITTER_CONSUMER_SECRET = ""
+TWITTER_ACCESS_TOKEN    = ""
+TWITTER_ACCESS_SECRET   = ""
+
+# Groups of rooms where you want to associate acounts with posting in room groups 
+[[ROOMGROUPS]] 
+Name = "Both"
+Rooms = [1233,1353] # Room Ids 
+	
+[[ROOMGROUPS]]
+Name = "SpecificRoom"
+Rooms =	[123454]
+
+# Post tweets from TwitterUsername1 to "Both" room group 
+[[ACCOUNTS]]
+Name = "TwitterUsername1"
+Rg = "Both"
+
+# Post tweets from TwitterUsername2 to "SpecificRoom" room group 
+[[ACCOUNTS]]
+Name = "TwitterUsername2"
+Rg = "SpecificRoom"
+
