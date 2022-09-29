@@ -1,0 +1,13 @@
+# /etc/systemd/system/tweetChecker.service
+
+[Unit]
+Description=Maurice checking for tweets
+
+[Service]
+Type=simple
+ExecStart=/home/spencer/www/go/workspace/twitterwatcher/tweetChecker
+Restart=always 
+WorkingDirectory=/home/spencer/www/go/workspace/twitterwatcher/
+
+[Install]
+WantedBy=default.target
