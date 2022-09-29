@@ -186,7 +186,7 @@ func RunScript(cfg Config) {
 	if outTweetsCnt > 0 {
 		tsProcessMessages(cfg, outTweets)
 	} else {
-		fmt.Print(".")
+		fmt.Println("No tweets to process")
 		// No tweets to process")
 	}
 
